@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Solution - Wave Energy Harvesting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================= */
+    /* Reset and Base Styles */
+    /* ============================================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f8ff;
+      color: #003049;
+      overflow-x: hidden;
+    }
+    /* ============================================= */
+    /* Header and Footer */
+    /* ============================================= */
+    header, footer {
+      background-color: #0077b6;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    footer p {
+      margin: 0;
+    }
+    /* ============================================= */
+    /* Navigation */
+    /* ============================================= */
+    nav {
+      background-color: #023e8a;
+      text-align: center;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #caf0f8;
+    }
+    /* ============================================= */
+    /* Hero Section with Background Image */
+    /* ============================================= */
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInHero 2s ease-out;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 1rem;
+      animation: slideIn 1s forwards;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px #000;
+      margin-bottom: 1.5rem;
+      animation: slideIn 1s forwards;
+      animation-delay: 0.3s;
+    }
+    .hero-content button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #0077b6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: slideIn 1s forwards;
+      animation-delay: 0.5s;
+    }
+    .hero-content button:hover {
+      background-color: #005f8a;
+      transform: scale(1.05);
+    }
+    /* ============================================= */
+    /* Main Container */
+    /* ============================================= */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideUp 1.5s ease-out;
+    }
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0077b6;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.2s;
+    }
+    .container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.4s;
+    }
+    /* ============================================= */
+    /* Highlight Section */
+    /* ============================================= */
+    .highlight {
+      background: #caf0f8;
+      padding: 1rem;
+      border-left: 4px solid #0077b6;
+      margin: 1.5rem 0;
+      text-align: left;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.6s;
+    }
+    /* ============================================= */
+    /* List Styles */
+    /* ============================================= */
+    ul {
+      list-style: disc;
+      margin: 1rem 0 1rem 20px;
+      text-align: left;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.8s;
+    }
+    /* ============================================= */
+    /* Additional Content Sections */
+    /* ============================================= */
+    .info-section {
+      text-align: left;
+      margin: 2rem 0;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+    }
+    .info-section.delay-1 { animation-delay: 1s; }
+    .info-section.delay-2 { animation-delay: 1.2s; }
+    .info-section.delay-3 { animation-delay: 1.4s; }
+    /* ============================================= */
+    /* Animations */
+    /* ============================================= */
+    @keyframes fadeInHero {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    /* ============================================= */
+    /* Dummy Content for Extended Lines */
+    /* ============================================= */
+    .dummy {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #e0f7fa;
+      border: 1px dashed #0077b6;
+      border-radius: 5px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.6s;
+    }
+    .dummy p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .dummy-section {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #ffffff;
+      border: 1px solid #0077b6;
+      border-radius: 5px;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+      animation-delay: 1.8s;
+    }
+    .dummy-section p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .dummy-section-2 {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #caf0f8;
+      border: 1px solid #023e8a;
+      border-radius: 5px;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+      animation-delay: 2s;
+    }
+    .dummy-section-2 p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    /* ============================================= */
+    /* End Dummy Content */
+    /* ============================================= */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Our Solution</h1>
+  </header>
+  
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Project</a>
+    <a href="solution.html">Our Solution</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hybrid Energy Harvesting System</h2>
+      <p>
+        Combining the power of ocean waves and the sun, our system offers a sustainable and reliable energy solution.
+      </p>
+      <button onclick="window.location.href='about.html'">Discover More</button>
+    </div>
+  </section>
+  
+  <!-- Main Content Container -->
+  <div class="container">
+    <h2>Overview</h2>
+    <p>
+      Our innovative solution integrates wave energy converters with solar panels to harness the kinetic energy of ocean waves along with abundant solar power during the day. This hybrid approach is designed to provide consistent energy output for coastal communities and industries.
+    </p>
+    
+    <!-- Working Principle Section -->
+    <div class="highlight">
+      <strong>Working Principle:</strong>
+      <p>
+        A floating platform equipped with a wave energy converter captures vertical motion, driving a small generator to produce electricity. In tandem, integrated solar panels boost energy production during sunny periods.
+      </p>
+    </div>
+    
+    <!-- Key Features -->
+    <div class="info-section delay-1">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Dual-source renewable energy capture</li>
+        <li>Modular and scalable design</li>
+        <li>Eco-friendly construction with low maintenance</li>
+        <li>Optimized for coastal and remote installations</li>
+      </ul>
+    </div>
+    
+    <!-- Benefits & Impact -->
+    <div class="info-section delay-2">
+      <h2>Benefits & Impact</h2>
+      <p>
+        Our system reduces reliance on fossil fuels, lowers operational costs, and minimizes environmental impact. It offers a sustainable energy solution adaptable to various settings.
+      </p>
+    </div>
+    
+    <!-- Future Enhancements -->
+    <div class="info-section delay-3">
+      <h2>Future Enhancements</h2>
+      <p>
+        Future improvements include advanced AI for predictive maintenance, enhanced energy storage solutions, and scalable deployment strategies to further optimize system performance.
+      </p>
+    </div>
+    
+    <!-- Dummy Content for Extended Length -->
+    <div class="dummy">
+      <p>This additional content section provides further insights into our research and development process. Our continuous efforts aim to refine the design and maximize efficiency.</p>
+    </div>
+    
+    <div class="dummy-section">
+      <p>In-depth studies on environmental impact, cost analysis, and system durability have guided our design process. We believe that innovation in renewable energy can lead to a sustainable future.</p>
+    </div>
+    
+    <div class="dummy-section-2">
+      <p>We welcome feedback and collaboration from industry experts and local communities to improve and scale our solution. Together, we can harness the power of waves to transform energy production.</p>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GTU-SET | Project by Team WaveForce</p>
+  </footer>
+  
+</body>
+</html>

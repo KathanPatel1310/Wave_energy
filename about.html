@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Project - Wave Energy Harvesting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+      color: #003049;
+      overflow-x: hidden;
+    }
+    header, footer {
+      background-color: #0077b6;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    /* Navigation */
+    nav {
+      background-color: #023e8a;
+      text-align: center;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #caf0f8;
+    }
+    /* Container & Content */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: slideUp 1.5s ease-out;
+    }
+    .container img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .container img:hover {
+      transform: scale(1.02);
+    }
+    h1, h2 {
+      margin-top: 0;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    h1 { animation-delay: 0.2s; }
+    h2 { animation-delay: 0.4s; }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.6s;
+    }
+    .highlight {
+      background-color: #caf0f8;
+      padding: 1.2rem;
+      border-left: 5px solid #0077b6;
+      margin: 1.5rem 0;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.8s;
+    }
+    .info-section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInText 1s forwards;
+    }
+    .info-section.delay-1 { animation-delay: 1s; }
+    .info-section.delay-2 { animation-delay: 1.2s; }
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About the Project</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Project</a>
+    <a href="solution.html">Our Solution</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Wave Energy">
+    <h2>Why Wave Energy Harvesting?</h2>
+    <p>
+      Our project explores harnessing the enormous, renewable power of ocean waves to generate electricity. With the ever-growing demand for clean energy, we saw an incredible opportunity in tapping into this abundant resource.
+    </p>
+    <div class="highlight">
+      <strong>Project Vision:</strong>
+      <p>
+        To develop a sustainable, scalable, and cost-effective system that converts the kinetic energy of waves into electricity, providing reliable power for coastal communities and industries.
+      </p>
+    </div>
+    <div class="info-section delay-1">
+      <h2>Problem Statement</h2>
+      <p>
+        Coastal regions often face energy shortages and rely on non-renewable sources. Our challenge is to create a system that effectively harnesses wave energy while minimizing environmental impact and installation costs.
+      </p>
+    </div>
+    <div class="info-section delay-2">
+      <h2>Research & Insights</h2>
+      <p>
+        Extensive research into existing wave energy technologies revealed key challenges such as variable wave intensity, structural durability, and maintenance costs. Our design aims to address these issues with innovative engineering and sustainable practices.
+      </p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 GTU-SET | Project by Team WaveForce</p>
+  </footer>
+</body>
+</html>

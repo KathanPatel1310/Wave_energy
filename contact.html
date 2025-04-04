@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Wave Energy Harvesting</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
+      color: #003049;
+      animation: floatBackground 20s infinite alternate ease-in-out;
+    }
+
+    @keyframes floatBackground {
+      0% { background-position: center top; }
+      100% { background-position: center bottom; }
+    }
+
+    header, footer {
+      background-color: rgba(0, 119, 182, 0.85);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgba(2, 62, 138, 0.85);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    .contact-info h2 {
+      color: #0077b6;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    form button:hover {
+      background-color: #005f8a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Project</a>
+    <a href="solution.html">Our Solution</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Email: <a href="mailto:waveforce@gtu.ac.in">waveforce@gtu.ac.in</a></p>
+      <p>Phone: +91-90167-66180</p>
+      <p>Address: GTU-SET Campus, Ahmedabad, Gujarat, India</p>
+    </div>
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 GTU-SET | Project by Team WaveForce</p>
+  </footer>
+</body>
+</html>
